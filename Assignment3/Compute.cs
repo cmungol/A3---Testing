@@ -13,44 +13,18 @@ namespace Assignment3
 
         public void Run()
         {
-            int bracket = 0;
             if (0 < income && income <= 20000)
-                bracket = 1;
+                tax = income * .04f;
             else if (20000 < income && income <= 30000)
-                bracket = 2;
+                tax = income * .05f;
             else if (30000 < income && income <= 40000)
-                bracket = 3;
+                tax = income * .06f;
             else if (40000 < income && income <= 50000)
-                bracket = 4;
+                tax = income * .07f;
             else if (50000 < income && income <= 90000)
-                bracket = 5;
+                tax = income * .10f;
             else
-                bracket = 6;
-
-            switch (bracket)
-            {
-                case 1:
-                    tax = income * .04f;
-                    break;
-                case 2:
-                    tax = income * .05f;
-                    break;
-                case 3:
-                    tax = income * .06f;
-                    break;
-                case 4:
-                    tax = income * .07f;
-                    break;
-                case 5:
-                    tax = income * .10f;
-                    break;
-                case 6:
-                    tax = income * .13f;
-                    break;
-                default:
-                    Console.WriteLine("Something is wrong with the income bracket computation");
-                    break;
-            }
+                tax = income * .13f;
 
             if (dependent == 1)
                 tax = tax - (0.1f * tax);
