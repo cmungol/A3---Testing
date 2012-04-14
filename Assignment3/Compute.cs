@@ -5,6 +5,7 @@ using System.Text;
 
 namespace Assignment3
 {
+    
     public class Compute
     {
         public ulong income { get; set; }
@@ -32,7 +33,6 @@ namespace Assignment3
                 tax = tax - (0.25f * tax);
             else if (3 < dependent)
                 tax = tax - (.4f * tax);
-            //might be a redundant statement
             else
                 tax = tax;
         }
