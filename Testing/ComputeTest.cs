@@ -37,6 +37,7 @@ namespace Testing
             comp.dependent = 0;
             comp.Run();
             Assert.AreEqual(600, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -49,6 +50,7 @@ namespace Testing
             comp.dependent = 1;
             comp.Run();
             Assert.AreEqual(580, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -61,6 +63,7 @@ namespace Testing
             comp.dependent = 2;
             comp.Run();
             Assert.AreEqual(850, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -73,6 +76,7 @@ namespace Testing
             comp.dependent = 4;
             comp.Run();
             Assert.AreEqual(360, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -85,6 +89,7 @@ namespace Testing
             comp.dependent = 0;
             comp.Run();
             Assert.AreEqual(1250, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -97,6 +102,7 @@ namespace Testing
             comp.dependent = 1;
             comp.Run();
             Assert.AreEqual(1125, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -109,6 +115,7 @@ namespace Testing
             comp.dependent = 2;
             comp.Run();
             Assert.AreEqual(937.50, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -121,6 +128,7 @@ namespace Testing
             comp.dependent = 4;
             comp.Run();
             Assert.AreEqual(750, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -133,6 +141,7 @@ namespace Testing
             comp.dependent = 0;
             comp.Run();
             Assert.AreEqual(2100, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -145,6 +154,7 @@ namespace Testing
             comp.dependent = 1;
             comp.Run();
             Assert.AreEqual(1890, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -157,6 +167,7 @@ namespace Testing
             comp.dependent = 2;
             comp.Run();
             Assert.AreEqual(1575, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -169,6 +180,7 @@ namespace Testing
             comp.dependent = 4;
             comp.Run();
             Assert.AreEqual(1260, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -181,6 +193,7 @@ namespace Testing
             comp.dependent = 0;
             comp.Run();
             Assert.AreEqual(3150, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -193,6 +206,7 @@ namespace Testing
             comp.dependent = 1;
             comp.Run();
             Assert.AreEqual(2835, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -205,6 +219,7 @@ namespace Testing
             comp.dependent = 2;
             comp.Run();
             Assert.AreEqual(2362.50, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -217,6 +232,7 @@ namespace Testing
             comp.dependent = 4;
             comp.Run();
             Assert.AreEqual(1890, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -229,6 +245,7 @@ namespace Testing
             comp.dependent = 0;
             comp.Run();
             Assert.AreEqual(5500, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -241,6 +258,7 @@ namespace Testing
             comp.dependent = 1;
             comp.Run();
             Assert.AreEqual(4950, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -253,6 +271,7 @@ namespace Testing
             comp.dependent = 2;
             comp.Run();
             Assert.AreEqual(8125, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -265,6 +284,7 @@ namespace Testing
             comp.dependent = 4;
             comp.Run();
             Assert.AreEqual(3300, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         /// <summary>
@@ -277,6 +297,7 @@ namespace Testing
             comp.dependent = 0;
             comp.Run();
             Assert.AreEqual(12350, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         // <summary>
@@ -289,6 +310,7 @@ namespace Testing
             comp.dependent = 1;
             comp.Run();
             Assert.AreEqual(11115, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         // <summary>
@@ -301,6 +323,7 @@ namespace Testing
             comp.dependent = 2;
             comp.Run();
             Assert.AreEqual(9262.50, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
 
         // <summary>
@@ -313,6 +336,7 @@ namespace Testing
             comp.dependent = 4;
             comp.Run();
             Assert.AreEqual(7810, comp.tax);
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
         }
     }
 }
