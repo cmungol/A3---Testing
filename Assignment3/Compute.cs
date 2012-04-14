@@ -5,7 +5,6 @@ using System.Text;
 
 namespace Assignment3
 {
-    
     public class Compute
     {
         public ulong income { get; set; }
