@@ -4,6 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment3", "Assignment3\Assignment3.csproj", "{217627A7-B34E-477E-9258-473CE5BE6D00}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0A93B0C-5746-4FFA-8737-C8C8D8C68DEE}"
+	ProjectSection(SolutionItems) = preProject
+		Assignment3.vsmdi = Assignment3.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{007D21AD-9D29-4A6B-9B26-04E63F6D8262}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
@@ -28,6 +35,16 @@ Global
 		{217627A7-B34E-477E-9258-473CE5BE6D00}.Release|Mixed Platforms.Build.0 = Release|x86
 		{217627A7-B34E-477E-9258-473CE5BE6D00}.Release|x86.ActiveCfg = Release|x86
 		{217627A7-B34E-477E-9258-473CE5BE6D00}.Release|x86.Build.0 = Release|x86
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{007D21AD-9D29-4A6B-9B26-04E63F6D8262}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
