@@ -9,55 +9,61 @@ namespace Assignment3
     {
         public static void Main(string[] args)
         {
-            //income
             ulong inc = 0UL;
             bool execute = true;
-
-            while (execute)
-            {
-                try
-                {
-                    Console.WriteLine("Enter income: ");
-                    inc = ulong.Parse(Console.ReadLine());
-                    execute = false;
-                }
-
-                //catch if income is not a valid integer
-                catch (FormatException e)
-                {
-                    Console.WriteLine("Enter a valid number for income!");
-                    execute = true;
-                }
-            }
-
-
-            //dependents
             ulong dep = 0UL;
-            execute = true;
+            string Continue = "yes";
 
-            while (execute)
+            do
             {
-                try
+                //income
+                while (execute)
                 {
-                    Console.WriteLine("Enter # of Dependents");
-                    dep = ulong.Parse(Console.ReadLine());
-                    execute = false;
+                    try
+                    {
+                        Console.WriteLine("Enter income: ");
+                        inc = ulong.Parse(Console.ReadLine());
+                        execute = false;
+                    }
+
+                    //catch if income is not a valid integer
+                    catch (FormatException e)
+                    {
+                        Console.WriteLine("Enter a valid number for income!");
+                        execute = true;
+                    }
                 }
-                
-                //catch if dependents are not a valid integer
-                catch (FormatException e)
+                //dependents
+                execute = true;
+                while (execute)
                 {
-                    Console.WriteLine("Enter a valid number for dependents!");
-                    execute = true;
+                    try
+                    {
+                        Console.WriteLine("Enter # of Dependents");
+                        dep = ulong.Parse(Console.ReadLine());
+                        execute = false;
+                    }
+
+                    //catch if dependents are not a valid integer
+                    catch (FormatException e)
+                    {
+                        Console.WriteLine("Enter a valid number for dependents!");
+                        execute = true;
+                    }
                 }
-            }
+                //Compute
+                Compute comp = new Compute() { income = inc, dependent = dep, tax = (decimal)0.0 };
+                comp.Run();
 
-            //Compute
-            Compute comp = new Compute() { income = inc, dependent = dep, tax = (decimal)0.0 };
-            comp.Run();
+                //print results
+                Console.WriteLine("Income: " + comp.income + " Dependent: " + comp.dependent + " Tax: " + comp.tax);
 
-            //print results
-            Console.WriteLine("Income: " + comp.income + " Dependent: " + comp.dependent + " Tax: " + comp.tax);
+                Console.WriteLine("Continue? yes or no");
+                Continue = Console.ReadLine();
+
+                execute = true;
+
+            } while (String.Compare(Continue, "yes", true) == 0 ? true : false );
         }
     }
 }
