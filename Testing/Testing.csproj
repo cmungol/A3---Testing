@@ -50,7 +50,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComputeTest.cs" />
+    <Compile Include="ComputeBoundaryValueTest.cs" />
+    <Compile Include="ComputePathTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

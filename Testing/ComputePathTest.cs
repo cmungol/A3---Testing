@@ -9,7 +9,7 @@ namespace Testing
     ///to contain all ComputeTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class ComputeTest
+    public class ComputePathTest
     {
 
         Compute comp;
@@ -17,7 +17,7 @@ namespace Testing
         [TestInitialize]
         public void Init()
         {
-            comp = new Compute() { income = 0UL, dependent = 0UL, tax = 0.0f };
+            comp = new Compute() { income = 0UL, dependent = 0UL, tax = (decimal)0.0 };
         }
 
         [TestCleanup]
@@ -26,10 +26,6 @@ namespace Testing
             comp = null;
         }
 
-
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_1()
         {
@@ -41,9 +37,6 @@ namespace Testing
             Assert.AreEqual(600, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_2()
         {
@@ -52,12 +45,9 @@ namespace Testing
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(580, comp.tax);
+            Assert.AreEqual(540, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_3()
         {
@@ -66,12 +56,9 @@ namespace Testing
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(850, comp.tax);
+            Assert.AreEqual(450, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_4()
         {
@@ -83,9 +70,6 @@ namespace Testing
             Assert.AreEqual(360, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_5()
         {
@@ -97,9 +81,6 @@ namespace Testing
             Assert.AreEqual(1250, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_6()
         {
@@ -111,9 +92,6 @@ namespace Testing
             Assert.AreEqual(1125, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_7()
         {
@@ -122,12 +100,9 @@ namespace Testing
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(937.50, comp.tax);
+            Assert.AreEqual(938, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_8()
         {
@@ -139,9 +114,6 @@ namespace Testing
             Assert.AreEqual(750, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_9()
         {
@@ -153,9 +125,6 @@ namespace Testing
             Assert.AreEqual(2100, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_10()
         {
@@ -167,9 +136,6 @@ namespace Testing
             Assert.AreEqual(1890, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_11()
         {
@@ -181,9 +147,6 @@ namespace Testing
             Assert.AreEqual(1575, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_12()
         {
@@ -195,9 +158,6 @@ namespace Testing
             Assert.AreEqual(1260, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_13()
         {
@@ -209,9 +169,6 @@ namespace Testing
             Assert.AreEqual(3150, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_14()
         {
@@ -223,9 +180,6 @@ namespace Testing
             Assert.AreEqual(2835, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_15()
         {
@@ -234,12 +188,9 @@ namespace Testing
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(2362.50, comp.tax);
+            Assert.AreEqual(2363, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_16()
         {
@@ -251,9 +202,6 @@ namespace Testing
             Assert.AreEqual(1890, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_17()
         {
@@ -265,9 +213,6 @@ namespace Testing
             Assert.AreEqual(5500, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_18()
         {
@@ -279,9 +224,6 @@ namespace Testing
             Assert.AreEqual(4950, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_19()
         {
@@ -290,12 +232,9 @@ namespace Testing
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(8125, comp.tax);
+            Assert.AreEqual(4125, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_20()
         {
@@ -307,9 +246,6 @@ namespace Testing
             Assert.AreEqual(3300, comp.tax);
         }
 
-        /// <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_21()
         {
@@ -321,9 +257,6 @@ namespace Testing
             Assert.AreEqual(12350, comp.tax);
         }
 
-        // <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_22()
         {
@@ -335,9 +268,6 @@ namespace Testing
             Assert.AreEqual(11115, comp.tax);
         }
 
-        // <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_23()
         {
@@ -346,12 +276,9 @@ namespace Testing
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(9262.50, comp.tax);
+            Assert.AreEqual(9263, comp.tax);
         }
 
-        // <summary>
-        ///A test for path coverage
-        ///</summary>
         [TestMethod()]
         public void pathTest_24()
         {
@@ -360,7 +287,7 @@ namespace Testing
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(7810, comp.tax);
+            Assert.AreEqual(7410, comp.tax);
         }
     }
 }

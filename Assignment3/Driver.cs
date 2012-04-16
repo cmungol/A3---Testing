@@ -53,7 +53,7 @@ namespace Assignment3
             }
 
             //Compute
-            Compute comp = new Compute() { income = inc, dependent = dep, tax = 0.0f };
+            Compute comp = new Compute() { income = inc, dependent = dep, tax = (decimal)0.0 };
             comp.Run();
 
             //print results
