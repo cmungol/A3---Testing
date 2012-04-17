@@ -19,17 +19,30 @@ namespace Assignment3
                 //income
                 while (execute)
                 {
+                    Console.WriteLine("\n##################################");
                     try
                     {
-                        Console.WriteLine("Enter income: ");
-                        inc = ulong.Parse(Console.ReadLine());
-                        execute = false;
+                        Console.Write("\nEnter income: ");
+                        try
+                        {
+                            inc = ulong.Parse(Console.ReadLine());
+                            execute = false;
+                        }
+                        catch (OverflowException e)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("\n!! - Enter a valid number for income");
+                            Console.ResetColor();
+                            execute = true;
+                        }
                     }
 
                     //catch if income is not a valid integer
                     catch (FormatException e)
                     {
-                        Console.WriteLine("Enter a valid number for income!");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\n!! - Enter a valid number for income");
+                        Console.ResetColor();
                         execute = true;
                     }
                 }
@@ -39,15 +52,28 @@ namespace Assignment3
                 {
                     try
                     {
-                        Console.WriteLine("Enter # of Dependents");
-                        dep = ulong.Parse(Console.ReadLine());
-                        execute = false;
+                        Console.Write("\nEnter # of Dependents: ");
+                        try
+                        {
+                            dep = ulong.Parse(Console.ReadLine());
+                            execute = false;
+                        }
+                        catch (OverflowException e)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("\n!! - Enter a valid number for dependents!");
+                            Console.ResetColor();
+                            execute = true;
+                        }
+
                     }
 
                     //catch if dependents are not a valid integer
                     catch (FormatException e)
                     {
-                        Console.WriteLine("Enter a valid number for dependents!");
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("\n!! - Enter a valid number for dependents!");
+                        Console.ResetColor();
                         execute = true;
                     }
                 }
@@ -56,11 +82,10 @@ namespace Assignment3
                 comp.Run();
 
                 //print results
-                Console.WriteLine("Income: " + comp.income + " Dependent: " + comp.dependent + " Tax: " + comp.tax);
+                Console.WriteLine("\nIncome: " + comp.income + " Dependent: " + comp.dependent + " Tax: " + comp.tax);
 
-                Console.WriteLine("Continue? yes or no");
+                Console.Write("\nContinue? yes or no: ");
                 Continue = Console.ReadLine();
-
                 execute = true;
 
             } while (String.Compare(Continue, "yes", true) == 0 ? true : false );
