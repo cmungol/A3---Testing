@@ -84,11 +84,14 @@ namespace Assignment3
                 //print results
                 Console.WriteLine("\nIncome: " + comp.income + " Dependent: " + comp.dependent + " Tax: " + comp.tax);
 
-                Console.Write("\nContinue? yes or no: ");
-                Continue = Console.ReadLine();
-                execute = true;
-
-            } while (String.Compare(Continue, "yes", true) == 0 ? true : false );
+                do
+                {
+                    Console.Write("\nContinue? yes or no: ");
+                    Continue = Console.ReadLine();
+                    execute = true;
+                } while ((String.Compare(Continue, "yes", true) == 0) || (String.Compare(Continue, "no", true) == 0) ? false : true);
+                    
+            } while (String.Compare(Continue, "yes", true) == 0 ? true : false);
         }
     }
 }
