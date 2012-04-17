@@ -13,7 +13,7 @@ namespace Assignment3
 
         public void Run()
         {
-            if (0 < income && income <= 20000)
+            if (0 <= income && income <= 20000)
                 tax = income * (decimal).04;
             else if (20000 < income && income <= 30000)
                 tax = income * (decimal).05;
