@@ -26,7 +26,16 @@ namespace Assignment3
                         try
                         {
                             inc = ulong.Parse(Console.ReadLine());
-                            execute = false;
+                            if (inc == 0)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine("\n!! - Enter a valid number for income");
+                                Console.ResetColor();
+                                execute = true;
+
+                            }
+                            else
+                                execute = false;
                         }
                         catch (OverflowException e)
                         {

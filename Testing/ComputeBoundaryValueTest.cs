@@ -245,5 +245,49 @@ namespace Testing
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
             Assert.AreEqual(335007449, comp.tax);
         }
+
+        [TestMethod()]
+        public void robust_1()
+        {
+            comp.income = 0;
+            comp.dependent = 0;
+            comp.Run();
+
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
+            Assert.AreEqual(0, comp.tax);
+        }
+
+        [TestMethod()]
+        public void robust_2()
+        {
+            comp.income = 4294967295;
+            comp.dependent = 1;
+            comp.Run();
+
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
+            Assert.AreEqual(502511174, comp.tax);
+        }
+
+        [TestMethod()]
+        public void robust_3()
+        {
+            comp.income = 4294967295;
+            comp.dependent = 2;
+            comp.Run();
+
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
+            Assert.AreEqual(418759311, comp.tax);
+        }
+
+        [TestMethod()]
+        public void robust_4()
+        {
+            comp.income = 4294967295;
+            comp.dependent = 4;
+            comp.Run();
+
+            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
+            Assert.AreEqual(335007449, comp.tax);
+        }
     }
 }
