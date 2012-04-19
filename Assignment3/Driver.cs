@@ -70,7 +70,7 @@ namespace Assignment3
                         catch (OverflowException e)
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("\n!! - Enter a valid number for dependents!");
+                            Console.WriteLine("\n!! - Enter a valid number for dependents");
                             Console.ResetColor();
                             execute = true;
                         }
@@ -81,7 +81,7 @@ namespace Assignment3
                     catch (FormatException e)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("\n!! - Enter a valid number for dependents!");
+                        Console.WriteLine("\n!! - Enter a valid number for dependents");
                         Console.ResetColor();
                         execute = true;
                     }

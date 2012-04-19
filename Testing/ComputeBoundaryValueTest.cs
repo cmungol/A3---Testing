@@ -51,34 +51,34 @@ namespace Testing
         [TestMethod()]
         public void bv_3()
         {
-            comp.income = 2147483648;
+            comp.income = 9223372036854775808;
             comp.dependent = 0;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(279172874, comp.tax);
+            Assert.AreEqual(1199038364791120855, comp.tax);
         }
 
         [TestMethod()]
         public void bv_4()
         {
-            comp.income = 4294967294;
+            comp.income = 18446744073709551614;
             comp.dependent = 0;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(558345748, comp.tax);
+            Assert.AreEqual(2398076729582241710, comp.tax);
         }
 
         [TestMethod()]
         public void bv_5()
         {
-            comp.income = 4294967295;
+            comp.income = 18446744073709551615;
             comp.dependent = 0;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(558345748, comp.tax);
+            Assert.AreEqual(2398076729582241710, comp.tax);
         }
 
         [TestMethod()]
@@ -106,34 +106,34 @@ namespace Testing
         [TestMethod()]
         public void bv_8()
         {
-            comp.income = 2147483648;
+            comp.income = 9223372036854775808;
             comp.dependent = 1;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(251255587, comp.tax);
+            Assert.AreEqual(1079134528312008770, comp.tax);
         }
 
         [TestMethod()]
         public void bv_9()
         {
-            comp.income = 4294967294;
+            comp.income = 18446744073709551614;
             comp.dependent = 1;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(502511173, comp.tax);
+            Assert.AreEqual(2158269056624017539, comp.tax);
         }
 
         [TestMethod()]
         public void bv_10()
         {
-            comp.income = 4294967295;
+            comp.income = 18446744073709551615;
             comp.dependent = 1;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(502511174, comp.tax);
+            Assert.AreEqual(2158269056624017539, comp.tax);
         }
 
         [TestMethod()]
@@ -161,34 +161,34 @@ namespace Testing
         [TestMethod()]
         public void bv_13()
         {
-            comp.income = 2147483648;
+            comp.income = 9223372036854775808;
             comp.dependent = 2;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(209379656, comp.tax);
+            Assert.AreEqual(899278773593340641, comp.tax);
         }
 
         [TestMethod()]
         public void bv_14()
         {
-            comp.income = 4294967294;
+            comp.income = 18446744073709551614;
             comp.dependent = 2;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(418759311, comp.tax);
+            Assert.AreEqual(1798557547186681282, comp.tax);
         }
 
         [TestMethod()]
         public void bv_15()
         {
-            comp.income = 4294967295;
+            comp.income = 18446744073709551615;
             comp.dependent = 2;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(418759311, comp.tax);
+            Assert.AreEqual(1798557547186681282, comp.tax);
         }
 
         [TestMethod()]
@@ -216,78 +216,34 @@ namespace Testing
         [TestMethod()]
         public void bv_18()
         {
-            comp.income = 2147483648;
+            comp.income = 9223372036854775808;
             comp.dependent = 4;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(167503725, comp.tax);
+            Assert.AreEqual(719423018874672513, comp.tax);
         }
 
         [TestMethod()]
         public void bv_19()
         {
-            comp.income = 4294967294;
+            comp.income = 18446744073709551614;
             comp.dependent = 4;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(335007449, comp.tax);
+            Assert.AreEqual(1438846037749345026, comp.tax);
         }
 
         [TestMethod()]
         public void bv_20()
         {
-            comp.income = 4294967295;
+            comp.income = 18446744073709551615;
             comp.dependent = 4;
             comp.Run();
 
             System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(335007449, comp.tax);
-        }
-
-        [TestMethod()]
-        public void robust_1()
-        {
-            comp.income = 0;
-            comp.dependent = 0;
-            comp.Run();
-
-            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(0, comp.tax);
-        }
-
-        [TestMethod()]
-        public void robust_2()
-        {
-            comp.income = 4294967295;
-            comp.dependent = 1;
-            comp.Run();
-
-            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(502511174, comp.tax);
-        }
-
-        [TestMethod()]
-        public void robust_3()
-        {
-            comp.income = 4294967295;
-            comp.dependent = 2;
-            comp.Run();
-
-            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(418759311, comp.tax);
-        }
-
-        [TestMethod()]
-        public void robust_4()
-        {
-            comp.income = 4294967295;
-            comp.dependent = 4;
-            comp.Run();
-
-            System.Diagnostics.Trace.WriteLine("income: " + comp.income + " dependents: " + comp.dependent + " tax: " + comp.tax);
-            Assert.AreEqual(335007449, comp.tax);
+            Assert.AreEqual(1438846037749345026, comp.tax);
         }
     }
 }
